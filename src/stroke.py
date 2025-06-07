@@ -26,8 +26,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from imblearn.combine import SMOTETomek
 import joblib
-from google.colab import files
-import shap
+#import shap
 
 def prediction_stroke(test):
     Y_RF = RF.predict(test)
@@ -80,7 +79,7 @@ def plot_roc_curve():
     # Diagonal line
     plt.plot([0, 1], [0, 1], linestyle='--', color='grey')
     return roc_stroke
-
+"""
 def plot_shap_stroke():
     ## SHAP ## XGBoost
     explainer = shap.TreeExplainer(XG)
@@ -94,7 +93,7 @@ def plot_shap_stroke():
     plt.tight_layout()
     return shap_stroke
     # RF is too slow, KNN and LR do not support shap
-
+"""
 url = "https://drive.google.com/file/d/1y1l7bbN7OyBIWwQYqv_44EIguytYoM7H/view?usp=sharing"
 path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
 dataset = pd.read_csv(path)
@@ -167,4 +166,4 @@ auc_lg = roc_auc_score(Y_test, y_score_LR)
 
 # Create figure and axis
 roc_stroke = plot_roc_curve()
-shap_stroke = plot_shap_stroke()
+#shap_stroke = plot_shap_stroke()

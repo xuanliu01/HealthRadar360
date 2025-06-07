@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from src.diabetes import DataOutput_diabetes, prediction_diabetes, results_df_diabetes, roc_diabetes, shap_diabetes
-from src.heart_failure import DataOutput_heart, prediction_heart, results_df_heart_failure, roc_heart, shap_heart
-from src.stroke import DataOutput_stroke, prediction_stroke, results_df_stroke, roc_stroke, shap_stroke
+from src.diabetes import DataOutput_diabetes, prediction_diabetes, results_df_diabetes, roc_diabetes #, shap_diabetes
+from src.heart_failure import DataOutput_heart, prediction_heart, results_df_heart_failure, roc_heart #, shap_heart
+from src.stroke import DataOutput_stroke, prediction_stroke, results_df_stroke, roc_stroke
 #!pip install gdown
 import gdown
 from PIL import Image
@@ -484,14 +484,14 @@ elif page == "📊 Resultsold":
         #st.pyplot(shap_diabetes)
         #st.pyplot(shap_heart)
         #st.pyplot(shap_stroke)
-        with col1:
-            st.pyplot(shap_diabetes)
+        #with col1:
+            #st.pyplot(shap_diabetes)
 
-        with col2:
-            st.pyplot(shap_heart)
+        #with col2:
+            #st.pyplot(shap_heart)
 
-        with col1:
-            st.pyplot(shap_stroke)
+        #with col1:
+            #st.pyplot(shap_stroke)
 
     else:
         st.warning("🚨 Please complete the survey first to view your results.")
@@ -536,11 +536,12 @@ elif page == "📊 Results":
 
         dcol1, dcol2,dcol3 = st.columns([1, 0.2,1])
         with dcol1:
-              st.pyplot(shap_diabetes)
+            st.write("    ")
+             # st.pyplot(shap_diabetes)
 
-              st.pyplot(shap_heart)
+             #st.pyplot(shap_heart)
 
-              st.pyplot(shap_stroke)
+              #st.pyplot(shap_stroke)
         with dcol2:
               st.write("    ")
         with dcol3:

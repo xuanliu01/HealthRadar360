@@ -1,2 +1,9 @@
 seaborn
-sklearn
+scikit-learn
+pandas
+streamlit
+xgboost
+imbalanced-learn  # 'imblearn' is installed via this name on pip
+shap
+gdown
+numpy<=2.2.0
