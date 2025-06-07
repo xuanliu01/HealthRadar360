@@ -94,8 +94,9 @@ def plot_shap_stroke():
     return shap_stroke
     # RF is too slow, KNN and LR do not support shap
 
-url = "https://drive.google.com/file/d/1y1l7bbN7OyBIWwQYqv_44EIguytYoM7H/view?usp=sharing"
-path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
+#url = "https://drive.google.com/file/d/1y1l7bbN7OyBIWwQYqv_44EIguytYoM7H/view?usp=sharing"
+#path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
+path = "./Data/healthcare-dataset-stroke-data.csv"
 dataset = pd.read_csv(path)
 
 #Creating a copy of dataset

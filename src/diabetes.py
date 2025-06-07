@@ -91,8 +91,9 @@ def plot_shap_diabetes(figx):
     return shap_diabetes
     # RF is too slow, KNN and LR do not support shap
 
-url = "https://drive.google.com/file/d/1PoO03AqSY645yZIXZuB1v7-WsEXZKWk9/view?usp=sharing"
-path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
+#url = "https://drive.google.com/file/d/1PoO03AqSY645yZIXZuB1v7-WsEXZKWk9/view?usp=sharing"
+#path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
+path = "./Data/diabetes_prediction_dataset.csv"
 data = pd.read_csv(path)
 # Remove Duplicates
 data = data.drop_duplicates()

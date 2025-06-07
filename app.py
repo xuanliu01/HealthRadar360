@@ -6,7 +6,7 @@ from src.diabetes import DataOutput_diabetes, prediction_diabetes, results_df_di
 from src.heart_failure import DataOutput_heart, prediction_heart, results_df_heart_failure, roc_heart, shap_heart
 from src.stroke import DataOutput_stroke, prediction_stroke, results_df_stroke, roc_stroke, shap_stroke
 #!pip install gdown
-import gdown
+#import gdown
 from PIL import Image
 
 ###################### model performance table ############################

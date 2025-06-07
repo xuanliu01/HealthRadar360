@@ -92,8 +92,9 @@ def plot_shap_heart():
     # RF is too slow, KNN and LR do not support shap
 
 # https://drive.google.com/file/d/1hKOQKNBL8sUriu6CDpaNVoHDZgdxUnPM/view?usp=sharing
-url = "https://drive.google.com/file/d/1hKOQKNBL8sUriu6CDpaNVoHDZgdxUnPM/view?usp=sharing"
-path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
+#url = "https://drive.google.com/file/d/1hKOQKNBL8sUriu6CDpaNVoHDZgdxUnPM/view?usp=sharing"
+#path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
+path = "./Data/heart.csv"
 data = pd.read_csv(path)
 
 numerical = ['Age', 'RestingBP', 'Cholesterol', 'FastingBS', 'MaxHR', 'Oldpeak']
