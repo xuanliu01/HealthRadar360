@@ -4,6 +4,7 @@ pandas
 streamlit
 xgboost
 imbalanced-learn  # 'imblearn' is installed via this name on pip
+imblearn
 shap
 gdown
 numpy<=2.2.0
