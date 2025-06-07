@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from src.diabetes import DataOutput_diabetes, prediction_diabetes, results_df_diabetes, roc_diabetes #, shap_diabetes
-from src.heart_failure import DataOutput_heart, prediction_heart, results_df_heart_failure, roc_heart #, shap_heart
+from src.diabetes import DataOutput_diabetes, prediction_diabetes, results_df_diabetes, roc_diabetes
+from src.heart_failure import DataOutput_heart, prediction_heart, results_df_heart_failure, roc_heart
 from src.stroke import DataOutput_stroke, prediction_stroke, results_df_stroke, roc_stroke
 #!pip install gdown
 import gdown
