@@ -23,7 +23,7 @@ warnings.filterwarnings('ignore')
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from imblearn.combine import SMOTETomek
-#import shap
+import shap
 
 def prediction_diabetes(test):
     Y_RF = RF.predict(test)
@@ -76,7 +76,7 @@ def plot_roc_curve():
     # Diagonal line
     plt.plot([0, 1], [0, 1], linestyle='--', color='grey')
     return roc_diabetes
-"""
+
 def plot_shap_diabetes(figx):
     ## SHAP ## XGBoost
     explainer = shap.TreeExplainer(XG)
@@ -90,7 +90,7 @@ def plot_shap_diabetes(figx):
     plt.tight_layout()
     return shap_diabetes
     # RF is too slow, KNN and LR do not support shap
-"""
+
 url = "https://drive.google.com/file/d/1PoO03AqSY645yZIXZuB1v7-WsEXZKWk9/view?usp=sharing"
 path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
 data = pd.read_csv(path)
@@ -152,5 +152,5 @@ auc_lg = roc_auc_score(Y_test, y_score_LR)
 
 # Create figure and axis
 roc_diabetes = plot_roc_curve()
-#shap_diabetes = plot_shap_diabetes(5)
+shap_diabetes = plot_shap_diabetes(5)
 

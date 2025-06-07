@@ -23,7 +23,7 @@ import warnings
 warnings.filterwarnings('ignore')
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-#import shap
+import shap
 
 def prediction_heart(test):
     Y_RF = RF.predict(test)
@@ -76,7 +76,7 @@ def plot_roc_curve():
     # Diagonal line
     plt.plot([0, 1], [0, 1], linestyle='--', color='grey')
     return roc_heart
-"""
+
 def plot_shap_heart():
     ## SHAP ## XGBoost
     explainer = shap.TreeExplainer(XG)
@@ -90,7 +90,7 @@ def plot_shap_heart():
     plt.tight_layout()
     return shap_heart
     # RF is too slow, KNN and LR do not support shap
-"""
+
 # https://drive.google.com/file/d/1hKOQKNBL8sUriu6CDpaNVoHDZgdxUnPM/view?usp=sharing
 url = "https://drive.google.com/file/d/1hKOQKNBL8sUriu6CDpaNVoHDZgdxUnPM/view?usp=sharing"
 path = "https://drive.google.com/uc?export=download&id="+url.split("/")[-2]
@@ -170,4 +170,4 @@ auc_lg = roc_auc_score(Y_test, y_score_LR)
 
 # Create figure and axis
 roc_heart = plot_roc_curve()
-#shap_heart = plot_shap_heart()
+shap_heart = plot_shap_heart()

@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from src.diabetes import DataOutput_diabetes, prediction_diabetes, results_df_diabetes, roc_diabetes
-from src.heart_failure import DataOutput_heart, prediction_heart, results_df_heart_failure, roc_heart
-from src.stroke import DataOutput_stroke, prediction_stroke, results_df_stroke, roc_stroke
+from src.diabetes import DataOutput_diabetes, prediction_diabetes, results_df_diabetes, roc_diabetes, shap_diabetes
+from src.heart_failure import DataOutput_heart, prediction_heart, results_df_heart_failure, roc_heart, shap_heart
+from src.stroke import DataOutput_stroke, prediction_stroke, results_df_stroke, roc_stroke, shap_stroke
 #!pip install gdown
 import gdown
 from PIL import Image
@@ -37,19 +37,19 @@ X_train_stroke, X_test_stroke, Y_train_stroke, Y_test_stroke = DataOutput_stroke
 
 # 📸 3 images in columns 
 # Image 1 #https://drive.google.com/file/d/1lupcOFRH-nP4gbWI2ebAsCxlvcLm6v_v/view?usp=sharing
-file_id1 = "1lupcOFRH-nP4gbWI2ebAsCxlvcLm6v_v"
-url1 = f"https://drive.google.com/uc?id={file_id1}"
-gdown.download(url1, "diabetes.png", quiet=False)
+#file_id1 = "1lupcOFRH-nP4gbWI2ebAsCxlvcLm6v_v"
+#url1 = f"https://drive.google.com/uc?id={file_id1}"
+#gdown.download(url1, "diabetes.png", quiet=False)
 
 # Image 2 #https://drive.google.com/file/d/13uFV-ZIKXRPgyE8CYjJxKr1yzrWQlRp_/view?usp=sharing
-file_id2 = "13uFV-ZIKXRPgyE8CYjJxKr1yzrWQlRp_"
-url2 = f"https://drive.google.com/uc?id={file_id2}"
-gdown.download(url2, "heart.jpg", quiet=False)
+#file_id2 = "13uFV-ZIKXRPgyE8CYjJxKr1yzrWQlRp_"
+#url2 = f"https://drive.google.com/uc?id={file_id2}"
+#gdown.download(url2, "heart.jpg", quiet=False)
 
 # Image 3 #https://drive.google.com/file/d/1UO2Cc8kS5LT3YDEZ6Jdz2FtyiLJTC_-Z/view?usp=sharing
-file_id3 = "1UO2Cc8kS5LT3YDEZ6Jdz2FtyiLJTC_-Z"
-url3 = f"https://drive.google.com/uc?id={file_id3}"
-gdown.download(url3, "stroke.png", quiet=False)
+#file_id3 = "1UO2Cc8kS5LT3YDEZ6Jdz2FtyiLJTC_-Z"
+#url3 = f"https://drive.google.com/uc?id={file_id3}"
+#gdown.download(url3, "stroke.png", quiet=False)
 
 # ----------------------------------------
 # 🏠 HOME PAGE
@@ -536,12 +536,11 @@ elif page == "📊 Results":
 
         dcol1, dcol2,dcol3 = st.columns([1, 0.2,1])
         with dcol1:
-            st.write("    ")
-             # st.pyplot(shap_diabetes)
+              st.pyplot(shap_diabetes)
 
-             #st.pyplot(shap_heart)
+              st.pyplot(shap_heart)
 
-              #st.pyplot(shap_stroke)
+              st.pyplot(shap_stroke)
         with dcol2:
               st.write("    ")
         with dcol3:
