@@ -1,0 +1,9 @@
+# Ignore virtual environments
+venv/
+testenv/
+.venv/
+.env/
+__pycache__/
+*.pyc
+.DS_Store
+.devcontainer/
