@@ -1,9 +1,9 @@
 seaborn
-scikit-learn
+scikit-learn >= 1.3.0
 pandas
 streamlit
 xgboost
-imbalanced-learn  # 'imblearn' is installed via this name on pip
+imbalanced-learn >= 0.12.0  # 'imblearn' is installed via this name on pip
 imblearn
 shap
 gdown
