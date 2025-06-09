@@ -660,7 +660,7 @@ elif page == "📬 Contact":
     st.write("Have a question or want to collaborate? Send me a message!")
 
     contact_form = """
-    <form action="https://formsubmit.co/fd0e92a4e07b39bde8b94c76aa3fe5b2" method="POST">
+    <form action="https://formsubmit.co/healthradar360@hotmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 5px;"><br><br>
         <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 5px;"><br><br>
