@@ -658,14 +658,39 @@ elif page == "⚙️ Models":
 elif page == "📬 Contact":
     st.markdown("## 📬 Contact Me")
     st.write("Have a question or want to collaborate? Send me a message!")
-
     contact_form = """
-    <form action="https://formsubmit.co/healthradar360@hotmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 5px;"><br><br>
-        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 5px;"><br><br>
-        <textarea name="message" placeholder="Your message here..." required style="width: 100%; height: 100px; padding: 5px;"></textarea><br><br>
-        <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Send</button>
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .contact-form button {
+            padding: 0.75rem;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <form class="contact-form" target="_blank" action="https://formsubmit.co/healthradar360@hotmail.com" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="8" placeholder="Your Message" required></textarea>
+        <button type="submit">📩 Submit</button>
     </form>
     """
     st.markdown(contact_form, unsafe_allow_html=True)
