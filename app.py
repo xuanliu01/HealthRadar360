@@ -30,7 +30,7 @@ st.set_page_config(page_title="HealthRadar360", layout="wide")
 st.sidebar.title("🩺 HealthRadar360")
 
 # Sidebar Navigation
-page = st.sidebar.radio("Navigation", ["🏠 Home", "📝 Survey", "📊 Results", "⚙️ Models"])
+page = st.sidebar.radio("Navigation", ["🏠 Home", "📝 Survey", "📊 Results", "⚙️ Models", "📬 Contact"])
 X_train_diabetes, X_test_diabetes, Y_train_diabetes, Y_test_diabetes = DataOutput_diabetes()
 X_train_heart, X_test_heart, Y_train_heart, Y_test_heart = DataOutput_heart()
 X_train_stroke, X_test_stroke, Y_train_stroke, Y_test_stroke = DataOutput_stroke()
@@ -655,7 +655,20 @@ elif page == "⚙️ Models":
 
         with col3:
             st.pyplot(roc_stroke)
+elif page == "📬 Contact":
+    st.markdown("## 📬 Contact Me")
+    st.write("Have a question or want to collaborate? Send me a message!")
 
+    contact_form = """
+    <form action="https://formsubmit.co/fd0e92a4e07b39bde8b94c76aa3fe5b2" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 5px;"><br><br>
+        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 5px;"><br><br>
+        <textarea name="message" placeholder="Your message here..." required style="width: 100%; height: 100px; padding: 5px;"></textarea><br><br>
+        <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Send</button>
+    </form>
+    """
+    st.markdown(contact_form, unsafe_allow_html=True)
 
 
 st.markdown("---\n*Powered by HealthRadar360 · Built with Streamlit*", unsafe_allow_html=True)
